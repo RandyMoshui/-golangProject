@@ -1,0 +1,95 @@
+.card{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+
+    position: relative;
+
+    width: 360px;
+    height: 500px;
+    margin: 15px;
+}
+
+
+
+#front {
+    width: 100%;
+    height: 100%;
+
+    position: absolute;
+
+    border-radius: 25px;
+    /* background: #2f363e;
+    box-shadow: 25px 25px 35px rgba(0, 0, 0, 0.25),
+    10px 10px 30px rgba(0, 0, 0, 0.25),
+    inset 5px 5px 5px rgba(0, 0, 0, 0.5),
+    inset 5px 5px 15px rgba(255,255,255,0.2),
+    inset -5px -5px 15px rgba(0, 0, 0, 0.75); */
+    background: linear-gradient(
+        to right bottom,
+        rgba(255, 255, 255, 0.6),
+        rgba(255, 255, 255, 0.1)
+    );
+    backdrop-filter: blur(8px);
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.2);
+    border-top: 1px solid rgba(255, 255, 255, 0.8);
+    border-left: 1px solid rgba(255, 255, 255, 0.8);
+    
+    display: flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction:column;
+
+    background-size: cover;
+    backface-visibility: hidden;
+
+    /* 设置动画变化过程 */
+    transition: 0.8s;
+
+    transform: perspective(800px) rotateY(0deg);
+    user-select: none;
+}
+
+#back {
+    width: 100%;
+    height: 100%;
+
+    position: absolute;
+
+    border-radius: 25px;
+    /* background: #2f363e;
+    box-shadow: 25px 25px 35px rgba(0, 0, 0, 0.25),
+    10px 10px 30px rgba(0, 0, 0, 0.25),
+    inset 5px 5px 5px rgba(0, 0, 0, 0.5),
+    inset 5px 5px 15px rgba(255,255,255,0.2),
+    inset -5px -5px 15px rgba(0, 0, 0, 0.75); */
+    background: linear-gradient(
+        to right bottom,
+        rgba(255, 255, 255, 0.6),
+        rgba(255, 255, 255, 0.1)
+    );
+    backdrop-filter: blur(8px);
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.2);
+    border-top: 1px solid rgba(255, 255, 255, 0.8);
+    border-left: 1px solid rgba(255, 255, 255, 0.8);
+    
+
+    background-size: cover;
+    backface-visibility: hidden;
+
+    /* 设置动画变化过程 */
+    transition: 0.8s;
+
+    transform: perspective(800px) rotateY(180deg);
+    display: flex;
+    overflow: hidden;
+}
+
+.card:hover #front{
+    transform: perspective(800px) rotateY(-180deg);
+}
+
+.card:hover #back{
+    transform: perspective(800px) rotateY(0deg);
+}
